@@ -1,0 +1,52 @@
+{
+  "name": "cpf-utils",
+  "version": "1.0.0",
+  "description": "Package with main utilities actions to deal with CPF data (Brazilian personal ID), like generation fake ones, validating and formatting",
+  "author": "Julio L. Muller",
+  "license": "MIT",
+  "keywords": [
+    "cpf",
+    "validar",
+    "validador",
+    "validate",
+    "validation",
+    "formatar",
+    "format",
+    "gerar",
+    "gerador",
+    "generate",
+    "generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliolmuller/cpf-utils-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juliolmuller/cpf-utils-js/issues"
+  },
+  "homepage": "https://github.com/juliolmuller/cpf-utils-js#readme",
+  "typings": "build/types.d.ts",
+  "main": "build/index.js",
+  "scripts": {
+    "build:browser": "rm -rf dist/ && webpack --mode=production",
+    "build:node": "rm -rf build/ && babel src/ --out-dir build/ && cp src/*.d.ts build/",
+    "build": "npm run build:browser && npm run build:node",
+    "lint": "eslint --fix src/**/*.js"
+  },
+  "dependencies": {
+    "@lacussoft/cpf-fmt": "^1.0.7",
+    "@lacussoft/cpf-gen": "^1.1.1",
+    "@lacussoft/cpf-val": "^1.0.8",
+    "core-js": "^3.8.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@lacussoft/eslint-config": "^1.0.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.17.0",
+    "webpack": "^5.14.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
