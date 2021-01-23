@@ -11,7 +11,7 @@ const generateConfig = (target) => ({
     filename: `${target}.js`,
     library: 'cpfUtils',
     libraryTarget: 'umd',
-    libraryExport: '*',
+    libraryExport: 'default',
     globalObject: 'window',
   },
   module: {
