@@ -1,6 +1,6 @@
 {
   "name": "cpf-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Package with main utilities actions to deal with CPF data (Brazilian personal ID), like generation fake ones, validating and formatting",
   "author": "Julio L. Muller",
   "license": "MIT",
@@ -34,10 +34,10 @@
     "lint": "eslint --fix src/**/*.js"
   },
   "dependencies": {
-    "@lacussoft/cpf-fmt": "^1.0.7",
-    "@lacussoft/cpf-gen": "^1.1.1",
-    "@lacussoft/cpf-val": "^1.0.8",
-    "core-js": "^3.8.2"
+    "@lacussoft/cpf-fmt": "^1.0.8",
+    "@lacussoft/cpf-gen": "^1.1.2",
+    "@lacussoft/cpf-val": "^1.0.9",
+    "core-js": "^3.8.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
@@ -46,7 +46,7 @@
     "@lacussoft/eslint-config": "^1.0.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.18.0",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1"
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
   }
 }
