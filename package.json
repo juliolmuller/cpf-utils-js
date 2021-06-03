@@ -14,7 +14,7 @@
     "lint:gen": "npm run lint --prefix packages/cpf-gen",
     "lint:val": "npm run lint --prefix packages/cpf-val",
     "lint": "npm run lint:utils && npm run lint:fmt && npm run lint:gen && npm run lint:val",
-    "test": "jest",
-    "publish:all": "npm run publish --prefix packages/cpf-utils && npm run publish --prefix packages/cpf-fmt && npm run publish --prefix packages/cpf-gen && npm run publish --prefix packages/cpf-val"
+    "test": "npm run test --workspaces",
+    "publish:all": "npm publish --workspace packages/cpf-fmt && npm publish --workspace packages/cpf-gen && npm publish --workspace packages/cpf-val && npm publish --workspace packages/cpf-utils"
   }
 }
