@@ -7,7 +7,7 @@ module.exports = {
     jest: true,
   },
   extends: [
-    '@lacussoft',
+    'lacussoft',
   ],
   ignorePatterns: [
     'build/',
