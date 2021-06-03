@@ -5,6 +5,16 @@
   ],
   "scripts": {
     "build:utils": "npm run build --prefix packages/cpf-utils",
-    "build": "npm run build:utils"
+    "build:fmt": "npm run build --prefix packages/cpf-fmt",
+    "build:gen": "npm run build --prefix packages/cpf-gen",
+    "build:val": "npm run build --prefix packages/cpf-val",
+    "build": "npm run build:utils && npm run build:fmt && npm run build:gen && npm run build:val",
+    "lint:utils": "npm run lint --prefix packages/cpf-utils",
+    "lint:fmt": "npm run lint --prefix packages/cpf-fmt",
+    "lint:gen": "npm run lint --prefix packages/cpf-gen",
+    "lint:val": "npm run lint --prefix packages/cpf-val",
+    "lint": "npm run lint:utils && npm run lint:fmt && npm run lint:gen && npm run lint:val",
+    "test": "jest",
+    "publish:all": "npm run publish --prefix packages/cpf-utils && npm run publish --prefix packages/cpf-fmt && npm run publish --prefix packages/cpf-gen && npm run publish --prefix packages/cpf-val"
   }
 }
