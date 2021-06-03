@@ -13,6 +13,9 @@ scripts:
   - cd packages/cpf-val
   - npm run build
   - cd ../..
+  - cd packages/cpf-utils
+  - npm run build
+  - cd ../..
 email:
   on_failure: change
   on_success: never
