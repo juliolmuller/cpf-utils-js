@@ -1,9 +1,8 @@
+os: linux
 language: node_js
 node_js:
-  - 10
-  - 12
   - 14
-scripts:
+script:
   - cd packages/cpf-fmt
   - npm run build
   - cd ../..
@@ -16,6 +15,3 @@ scripts:
   - cd packages/cpf-utils
   - npm run build
   - cd ../..
-email:
-  on_failure: change
-  on_success: never
