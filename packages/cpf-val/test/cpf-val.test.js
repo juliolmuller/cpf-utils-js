@@ -1,4 +1,4 @@
-const cpfVal = require('../build');
+const cpfVal = require('..');
 
 test('CPF string "499.784.420-90" is valid', () => {
   expect(cpfVal('499.784.420-90')).toBeTruthy();
