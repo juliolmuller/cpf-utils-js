@@ -9,7 +9,6 @@ import declarationsPlugin from 'rollup-plugin-dts'
 import deletePlugin from 'rollup-plugin-delete'
 import packageMeta from './package.json'
 
-const inputFileName = 'src/index.ts'
 const bundleBanner = `/**
  * cpf-utils v${packageMeta.version}
  *
@@ -30,7 +29,7 @@ const commonPlugins = (browser = false) => [
 
 export default [
   { // UMD
-    input: inputFileName,
+    input: 'src/dist.ts',
     output: [
       {
         name: 'cpfUtils',
@@ -58,14 +57,14 @@ export default [
     ],
   },
   { // CommonJS & ES Module
-    input: inputFileName,
+    input: 'src/module.ts',
     output: [
       {
         file: 'build/index.cjs.js',
         format: 'cjs',
         sourcemap: 'inline',
         banner: bundleBanner,
-        exports: 'default',
+        exports: 'named',
       },
       {
         file: 'build/index.esm.js',
@@ -83,7 +82,7 @@ export default [
     plugins: commonPlugins(),
   },
   { // Types declarations files
-    input: 'src/index.ts',
+    input: 'src/module.ts',
     output: [{ file: 'build/index.d.ts', format: 'es' }],
     plugins: [declarationsPlugin({})],
   },
