@@ -39,7 +39,7 @@ const defaultOptions: ActualCpfFormattingOptions = {
 /**
  * Merge custom options to the default ones.
  */
-function mergeOptions(customOptions: Partial<CpfFormattingOptions> = {}) {
+function mergeOptions(customOptions: CpfFormattingOptions = {}) {
   const options = mergeDeep(defaultOptions, customOptions) as ActualCpfFormattingOptions
 
   if (options.hidden) {

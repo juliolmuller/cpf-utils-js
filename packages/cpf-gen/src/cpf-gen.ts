@@ -1,9 +1,10 @@
-import numOnly from 'num-only'
 import cpfFmt from '@lacussoft/cpf-fmt'
+import numOnly from 'num-only'
+
 import mergeOptions from './merge-options'
+import type { CpfGeneratorOptions } from './merge-options'
 import numberGenerator from './number-generator'
 
-import type { CpfGeneratorOptions } from './merge-options'
 
 /**
  * Generate a valid CPF (Brazilian ID document) numeric sequence.
