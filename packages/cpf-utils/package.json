@@ -1,7 +1,7 @@
 {
   "name": "cpf-utils",
-  "version": "1.1.1",
-  "description": "Package with main utilities actions to deal with CPF data (Brazilian personal ID), like generation fake ones, validating and formatting",
+  "version": "1.2",
+  "description": "Utility functions to deal with CPF data (Brazilian personal ID), like generation fake ones, validating and formatting",
   "author": "Julio L. Muller",
   "license": "MIT",
   "keywords": [
@@ -15,7 +15,9 @@
     "gerar",
     "gerador",
     "generate",
-    "generator"
+    "generator",
+    "pt-br",
+    "br"
   ],
   "repository": {
     "type": "git",
@@ -32,9 +34,9 @@
     "lint": "eslint --fix src/"
   },
   "dependencies": {
-    "@lacussoft/cpf-fmt": "latest",
-    "@lacussoft/cpf-gen": "latest",
-    "@lacussoft/cpf-val": "latest"
+    "@lacussoft/cpf-fmt": "workspace:*",
+    "@lacussoft/cpf-gen": "workspace:*",
+    "@lacussoft/cpf-val": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
