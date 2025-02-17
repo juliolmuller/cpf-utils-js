@@ -5,6 +5,8 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "husky",
+    "commit": "git-cz",
     "build:utils": "bun run build --prefix packages/cpf-utils",
     "build:fmt": "bun run build --prefix packages/cpf-fmt",
     "build:gen": "bun run build --prefix packages/cpf-gen",
@@ -17,5 +19,13 @@
     "lint": "bun run lint:utils && bun run lint:fmt && bun run lint:gen && bun run lint:val",
     "test": "bun run test --filter cpf-*",
     "publish:all": "bun publish --workspace packages/cpf-fmt && bun publish --workspace packages/cpf-gen && bun publish --workspace packages/cpf-val && bun publish --workspace packages/cpf-utils"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3"
   }
 }
