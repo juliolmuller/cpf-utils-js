@@ -15,9 +15,14 @@ import packageMeta from './package.json' with { type: 'json' }
  * @param {string} bannerTitle
  * @param {string} moduleName
  * @param {string} distFileName
+ * @param {Object} [entryPoints]
+ * @param {string} [entryPoints.umd]
+ * @param {string} [entryPoints.modules]
  */
-export function makeRollupConfig(bannerTitle, moduleName, distFileName) {
-  const inputFileName = 'src/index.ts'
+export function makeRollupConfig(bannerTitle, moduleName, distFileName, {
+  umd: umdEntryPoint = 'src/index.ts',
+  modules: modulesEntryPoint = 'src/index.ts',
+} = {}) {
   const bundleBanner = `/**
    * ${bannerTitle} v${packageMeta.version}
    *
@@ -29,7 +34,7 @@ export function makeRollupConfig(bannerTitle, moduleName, distFileName) {
   return defineConfig([
     // UMD for legacy browsers
     {
-      input: inputFileName,
+      input: umdEntryPoint,
       output: [
         {
           name: moduleName,
@@ -69,7 +74,7 @@ export function makeRollupConfig(bannerTitle, moduleName, distFileName) {
 
     // CommonJS & ES Module
     {
-      input: inputFileName,
+      input: modulesEntryPoint,
       output: [
         {
           file: 'build/index.cjs.js',
@@ -100,7 +105,7 @@ export function makeRollupConfig(bannerTitle, moduleName, distFileName) {
 
     // Types declarations files
     {
-      input: inputFileName,
+      input: modulesEntryPoint,
       output: {
         file: 'build/index.d.ts',
         format: 'es',
