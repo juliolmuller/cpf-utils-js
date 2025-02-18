@@ -9,27 +9,41 @@ import deletePlugin from 'rollup-plugin-delete'
 import declarationsPlugin from 'rollup-plugin-dts'
 import esBuildPlugin from 'rollup-plugin-esbuild'
 
-import packageMeta from './package.json' with { type: 'json' }
-
 /**
- * @param {string} bannerTitle
- * @param {string} moduleName
- * @param {string} distFileName
- * @param {Object} [entryPoints]
- * @param {string} [entryPoints.umd]
- * @param {string} [entryPoints.modules]
+ * @param {Object} buildParams
+ * @param {any} buildParams.packageMeta
+ * @param {string} buildParams.bannerTitle
+ * @param {string} buildParams.globalName
+ * @param {string} buildParams.distFileName
+ * @param {string} [buildParams.umdEntryPoint]
+ * @param {string} [buildParams.modulesEntryPoint]
+ * @param {'default' | 'named'} [buildParams.cjsExports]
  */
-export function makeRollupConfig(bannerTitle, moduleName, distFileName, {
-  umd: umdEntryPoint = 'src/index.ts',
-  modules: modulesEntryPoint = 'src/index.ts',
-} = {}) {
+export function makeRollupConfig({
+  modulesEntryPoint = 'src/index.ts',
+  umdEntryPoint = 'src/index.ts',
+  cjsExports = 'default',
+  distFileName,
+  bannerTitle,
+  globalName,
+  packageMeta: {
+    author,
+    license,
+    version,
+    ...packageMeta
+  },
+}) {
+  if (!author || !license || !version) {
+    throw new Error('Missing build params in `package.json`.')
+  }
+
   const bundleBanner = `/**
-   * ${bannerTitle} v${packageMeta.version}
-   *
-   * @author ${packageMeta.author}.
-   * @license ${packageMeta.license} - 2020-${new Date().getFullYear()}
-   */
-  `
+ * ${bannerTitle} v${version}
+ *
+ * @author ${author}.
+ * @license ${license} - 2020-${new Date().getFullYear()}
+ */
+`
 
   return defineConfig([
     // UMD for legacy browsers
@@ -37,14 +51,14 @@ export function makeRollupConfig(bannerTitle, moduleName, distFileName, {
       input: umdEntryPoint,
       output: [
         {
-          name: moduleName,
+          name: globalName,
           file: `dist/${distFileName}.js`,
           format: 'umd',
           sourcemap: 'inline',
           banner: bundleBanner,
         },
         {
-          name: moduleName,
+          name: globalName,
           file: `dist/${distFileName}.min.js`,
           format: 'umd',
           sourcemap: 'inline',
@@ -80,12 +94,14 @@ export function makeRollupConfig(bannerTitle, moduleName, distFileName, {
           file: 'build/index.cjs.js',
           format: 'cjs',
           sourcemap: 'inline',
+          exports: cjsExports,
           banner: bundleBanner,
         },
         {
           file: 'build/index.esm.js',
           format: 'es',
           sourcemap: 'inline',
+          exports: 'named',
           banner: bundleBanner,
         },
       ],
