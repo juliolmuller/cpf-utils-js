@@ -7,7 +7,8 @@
   "scripts": {
     "prepare": "husky",
     "commit": "git-cz",
-    "lint": "bun run lint:fmt && bun run lint:gen && bun run lint:val && bun run lint:utils",
+    "lint": "bun run lint:root && bun run lint:fmt && bun run lint:gen && bun run lint:val && bun run lint:utils",
+    "lint:root": "eslint --fix eslint.config.mjs rollup.config.mjs",
     "lint:fmt": "cd packages/cpf-fmt && bun run lint",
     "lint:gen": "cd packages/cpf-gen && bun run lint",
     "lint:val": "cd packages/cpf-val && bun run lint",
