@@ -1,1 +1,1 @@
-export { default } from './cpf-val'
+export { default } from './cpf-val';
