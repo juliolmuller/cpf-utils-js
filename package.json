@@ -7,7 +7,15 @@
   "scripts": {
     "prepare": "husky",
     "commit": "git-cz",
-    "test": "husky run pre-push"
+    "lint": "bun run lint:fmt && bun run lint:gen && bun run lint:val && bun run lint:utils",
+    "lint:fmt": "cd packages/cpf-fmt && bun run lint",
+    "lint:gen": "cd packages/cpf-gen && bun run lint",
+    "lint:val": "cd packages/cpf-val && bun run lint",
+    "lint:utils": "cd packages/cpf-utils && bun run lint",
+    "test": "bun run test:fmt && bun run test:gen && bun run test:val",
+    "test:fmt": "cd packages/cpf-fmt && bun run test",
+    "test:gen": "cd packages/cpf-gen && bun run test",
+    "test:val": "cd packages/cpf-val && bun run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
