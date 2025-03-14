@@ -1,1 +1,1 @@
-export { default } from './cpf-gen'
+export { default } from './cpf-gen';
