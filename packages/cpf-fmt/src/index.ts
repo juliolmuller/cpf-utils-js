@@ -1,1 +1,1 @@
-export { default } from './cpf-fmt'
+export { default } from './cpf-fmt';
