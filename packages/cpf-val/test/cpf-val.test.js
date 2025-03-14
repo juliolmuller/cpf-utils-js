@@ -1,4 +1,6 @@
-const cpfVal = require('..');
+import { expect, test } from 'bun:test';
+
+import cpfVal from '..';
 
 test('CPF string "499.784.420-90" is valid', () => {
   expect(cpfVal('499.784.420-90')).toBeTruthy();
@@ -59,7 +61,6 @@ test('CPF string "499784420-75" is NOT valid', () => {
 test('CPF string "86244870011" is NOT valid', () => {
   expect(cpfVal('86244870011')).toBeFalsy();
 });
-
 
 /*
  * Other random values are invalid
