@@ -7,7 +7,7 @@
 ![Last Update Date](https://img.shields.io/github/last-commit/juliolmuller/cpf-utils-js)
 ![Project License](https://img.shields.io/github/license/juliolmuller/cpf-utils-js)
 
-Basic function to format CPF strings (Brazilian ID document).
+Utility function to format CPF (Brazilian ID document).
 
 ## Browser Support
 
