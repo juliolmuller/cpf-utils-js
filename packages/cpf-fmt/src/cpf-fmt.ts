@@ -7,7 +7,10 @@ import type { CpfFormattingOptions } from './merge-options';
 /**
  * Validate a given CPF char sequence.
  */
-function cpfFmt(cpfString: string, options?: CpfFormattingOptions) {
+function cpfFmt<OnErrFallback = string>(
+  cpfString: string,
+  options?: CpfFormattingOptions<OnErrFallback>,
+): string {
   const CPF_LENGTH = 11;
   const cpfArray = numOnly(cpfString).split('');
   const customOptions = mergeOptions(options);
