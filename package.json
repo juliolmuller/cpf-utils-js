@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "husky",
+    "prepare": "husky || true",
     "commit": "git-cz",
     "lint": "bun run lint:root && bun run lint:fmt && bun run lint:gen && bun run lint:val && bun run lint:utils",
     "lint:root": "eslint --fix eslint.config.mjs rollup.config.mjs",
