@@ -4,7 +4,7 @@ import numOnly from 'num-only';
 /**
  * Validate a given CPF (Brazilian ID document) char sequence.
  */
-function cpfVal(cpfString: string) {
+function cpfVal(cpfString: string): boolean {
   const CPF_LENGTH = 11;
   const cpfDigits = numOnly(cpfString);
 
