@@ -13,7 +13,12 @@
     "lint:gen": "cd packages/cpf-gen && bun run lint",
     "lint:val": "cd packages/cpf-val && bun run lint",
     "lint:utils": "cd packages/cpf-utils && bun run lint",
-    "test": "concurrently 'bun run test:fmt' 'bun run test:gen' 'bun run test:val'",
+    "build": "bun run build:fmt && bun run build:gen && bun run build:val && bun run build:utils",
+    "build:fmt": "cd packages/cpf-fmt && bun run build",
+    "build:gen": "cd packages/cpf-gen && bun run build",
+    "build:val": "cd packages/cpf-val && bun run build",
+    "build:utils": "cd packages/cpf-utils && bun run build",
+    "test": "bun run test:fmt && bun run test:gen && bun run test:val",
     "test:fmt": "cd packages/cpf-fmt && bun run test",
     "test:gen": "cd packages/cpf-gen && bun run test",
     "test:val": "cd packages/cpf-val && bun run test"
