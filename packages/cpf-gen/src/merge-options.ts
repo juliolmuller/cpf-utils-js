@@ -15,8 +15,8 @@ const defaultOptions = {
 /**
  * Merge custom options to the default ones.
  */
-function mergeOptions(customOptions: CpfGeneratorOptions = {}) {
-  return mergeDeep(defaultOptions, customOptions) as ActualCpfGeneratorOptions;
+function mergeOptions(customOptions: CpfGeneratorOptions = {}): ActualCpfGeneratorOptions {
+  return mergeDeep(defaultOptions, customOptions);
 }
 
 export default mergeOptions;
