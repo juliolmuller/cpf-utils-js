@@ -1,6 +1,6 @@
 {
   "name": "@lacussoft/cpf-val",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Utility function to validate CPF (Brazilian ID document).",
   "license": "MIT",
   "author": {
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@lacussoft/cpf-gen": "workspace:*",
-    "num-only": "^1.2.1"
+    "num-only": "^1.2.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
@@ -53,6 +53,6 @@
     "rollup-plugin-delete": "^3.0.1",
     "rollup-plugin-dts": "^6.2.1",
     "rollup-plugin-esbuild": "^6.2.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }

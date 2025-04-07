@@ -1,6 +1,6 @@
 {
   "name": "cpf-utils",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Utility functions to deal with CPF data (Brazilian personal ID), like generation fake ones, validating and formatting",
   "license": "MIT",
   "author": {
@@ -54,6 +54,6 @@
     "rollup-plugin-delete": "^3.0.1",
     "rollup-plugin-dts": "^6.2.1",
     "rollup-plugin-esbuild": "^6.2.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
