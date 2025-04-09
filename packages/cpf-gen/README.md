@@ -1,9 +1,9 @@
 # LacusSoft :: cpf-gen
 
 ![NPM Latest Version](https://img.shields.io/npm/v/@lacussoft/cpf-gen)
+![Bundle Size](https://img.shields.io/bundlephobia/min/@lacussoft/cpf-gen?label=bundle%20size)
 ![Downloads Count](https://img.shields.io/npm/dm/@lacussoft/cpf-gen.svg)
-![Bundle Size](https://packagephobia.now.sh/badge?p=@lacussoft/cpf-gen)
-![Test Status](https://img.shields.io/travis/juliolmuller/cpf-utils-js/main.svg)
+![Test Status](https://img.shields.io/github/actions/workflow/status/juliolmuller/cpf-utils-js/release.yml?label=ci/cd)
 ![Last Update Date](https://img.shields.io/github/last-commit/juliolmuller/cpf-utils-js)
 ![Project License](https://img.shields.io/github/license/juliolmuller/cpf-utils-js)
 
