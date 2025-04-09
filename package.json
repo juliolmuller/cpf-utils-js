@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "husky || true",
+    "prepare": "bun x husky",
     "commit": "git-cz",
     "lint": "concurrently 'bun run lint:root' 'bun run lint:fmt' 'bun run lint:gen' 'bun run lint:val' 'bun run lint:utils'",
     "lint:root": "eslint --fix eslint.config.mjs rollup.config.mjs",
@@ -30,7 +30,7 @@
     "concurrently": "^9.1.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.24.0",
-    "eslint-config-any": "^1.0.3",
+    "eslint-config-any": "^1.0.6",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
