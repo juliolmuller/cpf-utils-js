@@ -32,7 +32,7 @@
     "lint": "eslint --fix src/ test/ rollup.config.mjs",
     "pretest": "bun run build --silent",
     "test": "bun test --coverage --coverage-reporter=lcov --coverage-dir=test/__coverage__",
-    "prepublishOnly": "bun run test"
+    "test:ci": "bun test"
   },
   "publishConfig": {
     "access": "public"
