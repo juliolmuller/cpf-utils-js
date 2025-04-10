@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@lacussoft/cpf-gen": "workspace:*",
-    "num-only": "^1.2.5"
+    "num-only": "^1.2.6"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",

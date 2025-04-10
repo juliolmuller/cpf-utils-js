@@ -41,7 +41,7 @@
   "dependencies": {
     "@lacussoft/cpf-fmt": "workspace:*",
     "deepmerge": "^4.3.1",
-    "num-only": "^1.2.5"
+    "num-only": "^1.2.6"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
