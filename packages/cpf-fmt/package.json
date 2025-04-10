@@ -25,7 +25,7 @@
     "url": "https://github.com/juliolmuller/cpf-utils-js/issues"
   },
   "homepage": "https://github.com/juliolmuller/cpf-utils-js/main/packages/cpf-fmt#readme",
-  "main": "build/index.cjs.js",
+  "main": "build/index.cjs",
   "types": "build/index.d.ts",
   "scripts": {
     "build": "rollup --config",
