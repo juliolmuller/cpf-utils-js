@@ -22,7 +22,7 @@
       "dependencies": {
         "deepmerge": "^4.3.1",
         "html-escaper": "^3.0.3",
-        "num-only": "^1.2.5",
+        "num-only": "^1.2.6",
       },
       "devDependencies": {
         "@babel/preset-env": "^7.26.9",
@@ -47,7 +47,7 @@
       "dependencies": {
         "@lacussoft/cpf-fmt": "workspace:*",
         "deepmerge": "^4.3.1",
-        "num-only": "^1.2.5",
+        "num-only": "^1.2.6",
       },
       "devDependencies": {
         "@babel/preset-env": "^7.26.9",
@@ -94,7 +94,7 @@
       "version": "1.2.2",
       "dependencies": {
         "@lacussoft/cpf-gen": "workspace:*",
-        "num-only": "^1.2.5",
+        "num-only": "^1.2.6",
       },
       "devDependencies": {
         "@babel/preset-env": "^7.26.9",
@@ -1225,7 +1225,7 @@
 
     "nth-check": ["nth-check@2.1.1", "", { "dependencies": { "boolbase": "^1.0.0" } }, "sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w=="],
 
-    "num-only": ["num-only@1.2.5", "", {}, "sha512-Syh1WOqVyrY8d/X3JnNkWMWG1BBL+hRd1RnJbwsVjFj9aVuKOm0CB+l/wLwSGfidvtGHtdn1MOA3QusvTevn4g=="],
+    "num-only": ["num-only@1.2.6", "", {}, "sha512-2tBsLbTlmSqOGqtQH6sePBlwRciR7CWfBNUF55w7qaRXentCaKu9+XJ9tuiBhOhJtANmGYSe9G5XwsTpBfDU2Q=="],
 
     "object-assign": ["object-assign@4.1.1", "", {}, "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="],
 
