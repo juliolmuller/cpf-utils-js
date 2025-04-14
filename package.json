@@ -18,10 +18,11 @@
     "build:gen": "bun run --filter './***/cpf-gen' build",
     "build:val": "bun run --filter './***/cpf-val' build",
     "build:utils": "bun run --filter './**/cpf-utils' build",
-    "test": "bun run test:fmt && bun run test:gen && bun run test:val",
+    "test": "bun run test:fmt && bun run test:gen && bun run test:val && bun run test:utils",
     "test:fmt": "bun run --filter './***/cpf-fmt' test",
     "test:gen": "bun run --filter './***/cpf-gen' test",
-    "test:val": "bun run --filter './***/cpf-val' test"
+    "test:val": "bun run --filter './***/cpf-val' test",
+    "test:utils": "bun run --filter './**/cpf-utils' test"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
