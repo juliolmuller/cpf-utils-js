@@ -24,6 +24,7 @@
     "build:val": "bun run --filter './***/cpf-val' build",
     "build:utils": "bun run --filter './**/cpf-utils' build",
     "test": "bun run test:fmt && bun run test:gen && bun run test:val && bun run test:utils",
+    "test:ci": "bun run --filter '*' test:ci",
     "test:fmt": "bun run --filter './***/cpf-fmt' test",
     "test:gen": "bun run --filter './***/cpf-gen' test",
     "test:val": "bun run --filter './***/cpf-val' test",
