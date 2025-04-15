@@ -7,6 +7,11 @@
   "scripts": {
     "prepare": "bun x husky",
     "commit": "git-cz",
+    "type-check": "bun run --filter '*' type-check",
+    "type-check:fmt": "bun run --filter './***/cpf-fmt' type-check",
+    "type-check:gen": "bun run --filter './***/cpf-gen' type-check",
+    "type-check:val": "bun run --filter './***/cpf-val' type-check",
+    "type-check:utils": "bun run --filter './**/cpf-utils' type-check",
     "lint": "bun run lint:root && bun run --filter '*' lint",
     "lint:root": "eslint --fix eslint.config.mjs rollup.config.mjs",
     "lint:fmt": "bun run --filter './***/cpf-fmt' lint",
