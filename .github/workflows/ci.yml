@@ -27,7 +27,8 @@ jobs:
         with:
           bun-version: ${{ env.BUN_VERSION }}
       - run: bun install --frozen-lockfile
-      - run: bun run type-check
+      - run: bun run build
+      - run: bun run type-check:ci
 
   lint:
     name: Linting & Formatting Checks
