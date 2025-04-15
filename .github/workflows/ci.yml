@@ -59,7 +59,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        pgk: ['fmt', 'gen', 'val', 'utils']
+        pkg: ['fmt', 'gen', 'val', 'utils']
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
