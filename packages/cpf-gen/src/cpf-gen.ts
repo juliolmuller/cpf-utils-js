@@ -8,7 +8,7 @@ import numberGenerator from './number-generator';
 /**
  * Generate a valid CPF (Brazilian ID document) numeric sequence.
  */
-function cpfGen(options?: CpfGeneratorOptions) {
+function cpfGen(options?: CpfGeneratorOptions): string {
   const userOptions = mergeOptions(options);
   const baseSequence = numOnly(userOptions.prefix);
   const prefixLength = baseSequence.length;

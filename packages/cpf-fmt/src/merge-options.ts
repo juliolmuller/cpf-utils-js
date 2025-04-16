@@ -4,7 +4,7 @@ type DeepPartial<T> = {
   [P in keyof T]?: DeepPartial<T[P]>;
 };
 
-export interface ActualCpfFormattingOptions<ER = unknown> {
+export interface ActualCpfFormattingOptions<OnErrFallback> {
   delimiters: {
     dash: string;
     dot: string;
@@ -16,12 +16,14 @@ export interface ActualCpfFormattingOptions<ER = unknown> {
     end: number;
     start: number;
   };
-  onFail: (value: string, error: Error) => ER;
+  onFail: (value: string, error: Error) => OnErrFallback;
 }
 
-export type CpfFormattingOptions = DeepPartial<ActualCpfFormattingOptions>;
+export type CpfFormattingOptions<OnErrFallback> = DeepPartial<
+  ActualCpfFormattingOptions<OnErrFallback>
+>;
 
-const defaultOptions: ActualCpfFormattingOptions = {
+const defaultOptions: ActualCpfFormattingOptions<string> = {
   delimiters: {
     dot: '.',
     dash: '-',
@@ -39,8 +41,13 @@ const defaultOptions: ActualCpfFormattingOptions = {
 /**
  * Merge custom options to the default ones.
  */
-function mergeOptions(customOptions: CpfFormattingOptions = {}) {
-  const options = mergeDeep(defaultOptions, customOptions) as ActualCpfFormattingOptions;
+function mergeOptions<OnErrFallback>(
+  customOptions: CpfFormattingOptions<OnErrFallback> = {},
+): ActualCpfFormattingOptions<OnErrFallback> {
+  const options = mergeDeep(
+    defaultOptions,
+    customOptions,
+  ) as ActualCpfFormattingOptions<OnErrFallback>;
 
   if (options.hidden) {
     if (
