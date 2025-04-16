@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "access": "public",
-  "baseBranch": "main",
+  "baseBranch": "ci/github-actions",
   "updateInternalDependencies": "patch",
   "fixed": [],
   "ignore": [],
