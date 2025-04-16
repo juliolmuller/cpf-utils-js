@@ -38,18 +38,6 @@ jobs:
       - name: Install Dependencies
         run: bun install --frozen-lockfile
 
-      # - name: Set Package Version
-      #   run: |
-      #     TAG_NAME="${{ github.event.release.tag_name }}"
-      #     echo "Validating tag: $TAG_NAME"
-      #     if [[ ! "$TAG_NAME" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-      #       echo "❌ Invalid tag format. Expected format: v<MAJOR>.<MINOR>.<PATCH> (e.g., v1.2.3)"
-      #       exit 1
-      #     fi
-      #     VERSION=${TAG_NAME#v}
-      #     echo "Setting package version to $VERSION"
-      #     npm version --no-git-tag-version "$VERSION"
-
       - name: Build Distribution Artifacts
         run: bun run build
 
