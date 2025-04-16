@@ -7,6 +7,9 @@
   "scripts": {
     "prepare": "bun x husky",
     "commit": "git-cz",
+    "changelog": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish",
     "type-check": "bun run build && bun run type-check:ci",
     "type-check:ci": "bun run --filter '*' type-check",
     "type-check:fmt": "bun run --filter './***/cpf-fmt' type-check",
