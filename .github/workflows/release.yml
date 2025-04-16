@@ -55,4 +55,4 @@ jobs:
           version: bun run version
           publish: bun run release
           commit: 'chore: release packages'
-          title: 'Packages New Release'
+          title: 'New Packages Release'
