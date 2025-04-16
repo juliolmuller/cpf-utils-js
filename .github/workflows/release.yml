@@ -3,7 +3,7 @@ name: Release Packages
 on:
   push:
     branches:
-      - ci/github-actions
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
