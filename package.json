@@ -32,6 +32,7 @@
     "test:utils": "bun run --filter './**/cpf-utils' test"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.0",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "commitizen": "^4.3.1",
@@ -39,7 +40,7 @@
     "eslint": "^9.24.0",
     "eslint-config-any": "^1.0.6",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   }
