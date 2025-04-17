@@ -5,4 +5,4 @@
 "@lacussoft/cpf-val": patch
 ---
 
-Set explicit return type to functions
+4b94608f9586acff343838df1d251452a2f84a9f Added `type-check` script to all projects and to monorepo.
