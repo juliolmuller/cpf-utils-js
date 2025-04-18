@@ -1,5 +1,11 @@
 # @lacussoft/cpf-fmt
 
+## 1.4.0
+
+### Minor Changes
+
+- 7a9b0af: Configured packages entrypoints with `"exports"` option in `package.json`.
+
 ## 1.3.1
 
 ### Minor Changes
