@@ -21,6 +21,8 @@ env:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout Project Artifacts
         uses: actions/checkout@v4
