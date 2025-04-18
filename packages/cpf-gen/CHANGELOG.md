@@ -1,5 +1,16 @@
 # @lacussoft/cpf-gen
 
+## 1.5.0
+
+### Minor Changes
+
+- 7a9b0af: Configured packages entrypoints with `"exports"` option in `package.json`.
+
+### Patch Changes
+
+- Updated dependencies [7a9b0af]
+  - @lacussoft/cpf-fmt@1.4.0
+
 ## 1.4.1
 
 ### Minor Changes
