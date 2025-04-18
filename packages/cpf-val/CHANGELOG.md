@@ -1,6 +1,6 @@
 # @lacussoft/cpf-val
 
-## 1.3.0
+## 1.3.1
 
 ### Minor Changes
 
@@ -22,9 +22,7 @@
 - 583327c71f84bdd8d496bfb1f287fbf7802d729b..84cec9dee81d0af2f52b3153fa410306e2fd13c6: Created GitHub Actions workflow to create changelogs, increase versions and publish to NPM registry.
 - 7ba1718: Create file to set codebase owner.
 - Updated dependencies:
-  - @lacussoft/cpf-val@1.3.0
-  - @lacussoft/cpf-gen@1.4.0
-  - @lacussoft/cpf-fmt@1.3.0
+  - @lacussoft/cpf-gen@1.4.1
   - eslint@9.24.0
   - eslint-config-any@1.0.6
   - lint-staged@15.5.1
