@@ -1,5 +1,13 @@
 # @lacussoft/cpf-gen
 
+## 1.5.1
+
+### Patch Changes
+
+- 23ca50d: Fixed documentation examples.
+- Updated dependencies [23ca50d]
+  - @lacussoft/cpf-fmt@1.4.1
+
 ## 1.5.0
 
 ### Minor Changes

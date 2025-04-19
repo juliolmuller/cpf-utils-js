@@ -1,5 +1,11 @@
 # @lacussoft/cpf-fmt
 
+## 1.4.1
+
+### Patch Changes
+
+- 23ca50d: Fixed documentation examples.
+
 ## 1.4.0
 
 ### Minor Changes
