@@ -1,5 +1,13 @@
 # @lacussoft/cpf-val
 
+## 1.4.1
+
+### Patch Changes
+
+- 23ca50d: Fixed documentation examples.
+- Updated dependencies [23ca50d]
+  - @lacussoft/cpf-gen@1.5.1
+
 ## 1.4.0
 
 ### Minor Changes
