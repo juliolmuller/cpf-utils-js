@@ -127,18 +127,18 @@ cpfUtils.generate({
 
 Keep in mind that, for the `prefix` option, it must be a **string** containing up to 9 digits.
 
-### `cpfUtils.validate(string)`
+### `cpfUtils.isValid(string)`
 
 **returns** `boolean`
 
-The `validate` method receives a string as its single parameter, evaluate it and returns `true` or `false` as output. This parameter may contain any character like letters, symbols, punctuation or white spaces, but it will immediately return `false` in case the expected 11 digits are not found to be deeply evaluated.
+The `isValid` method receives a string as its single parameter, evaluate it and returns `true` or `false` as output. This parameter may contain any character like letters, symbols, punctuation or white spaces, but it will immediately return `false` in case the expected 11 digits are not found to be deeply evaluated.
 
 
 ```js
-cpfUtils.validate('12345678909')     // returns "true", because "123.456.789-09" is a valid CPF
+cpfUtils.isValid('12345678909')     // returns "true", because "123.456.789-09" is a valid CPF
 
-cpfUtils.validate('123.456.789-09')  // returns "true"
+cpfUtils.isValid('123.456.789-09')  // returns "true"
 
-cpfUtils.validate('12345678910')     // returns "false", because the suffix has changed, making this CPF invalid
+cpfUtils.isValid('12345678910')     // returns "false", because the suffix has changed, making this CPF invalid
                             ^^
 ```
