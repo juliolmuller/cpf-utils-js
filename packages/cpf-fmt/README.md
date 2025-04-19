@@ -18,7 +18,11 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 ## Installation
 
 ```bash
-$ npm install @lacussoft/cpf-fmt
+# using NPM
+$ npm install --save @lacussoft/cpf-fmt
+
+# using Bun
+$ bun add @lacussoft/cpf-fmt
 ```
 
 ## Import

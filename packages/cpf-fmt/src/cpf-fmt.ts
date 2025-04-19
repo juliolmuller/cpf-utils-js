@@ -5,7 +5,7 @@ import mergeOptions from './merge-options';
 import type { CpfFormattingOptions } from './merge-options';
 
 /**
- * Validate a given CPF char sequence.
+ * Format a given CPF char sequence.
  */
 function cpfFmt<OnErrFallback = string>(
   cpfString: string,

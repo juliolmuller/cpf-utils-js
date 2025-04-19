@@ -18,7 +18,11 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 ## Installation
 
 ```bash
-$ npm install @lacussoft/cpf-val
+# using NPM
+$ npm install --save @lacussoft/cpf-val
+
+# using Bun
+$ bun add @lacussoft/cpf-val
 ```
 
 ## Import

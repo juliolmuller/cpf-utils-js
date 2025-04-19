@@ -18,7 +18,11 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 ## Installation
 
 ```bash
-$ npm install @lacussoft/cpf-gen
+# using NPM
+$ npm install --save @lacussoft/cpf-gen
+
+# using Bun
+$ bun add @lacussoft/cpf-gen
 ```
 
 ## Import
@@ -51,7 +55,7 @@ cpf = cpfGen({          // returns '52825091138'
 })
 
 cpf = cpfGen({          // returns '528.250.911-38'
-  prefix: '528250911'
+  prefix: '528250911',
   format: true
 })
 ```
@@ -61,6 +65,6 @@ cpf = cpfGen({          // returns '528.250.911-38'
 ```js
 cpfGen({
   format: false, // indicates if output should be formatted
-  prefix: '',    // if you have a CPF initials and want to complete it with valid digits.
+  prefix: ''     // if you have a CPF initials and want to complete it with valid digits.
 })               //     The string provided must contain between 0 and 9 digits!
 ```
