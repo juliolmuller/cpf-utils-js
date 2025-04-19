@@ -1,5 +1,11 @@
 # cpf-utils
 
+## 1.4.2
+
+### Patch Changes
+
+- 308c5a3: Fixed validation method in documentation.
+
 ## 1.4.1
 
 ### Patch Changes
