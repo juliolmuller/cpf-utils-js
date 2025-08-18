@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/juliolmuller/cpf-utils-js/issues"
   },
-  "homepage": "https://github.com/juliolmuller/cpf-utils-js/main/packages/cpf-fmt#readme",
+  "homepage": "https://cpf-utils.vercel.app/",
   "main": "build/index.cjs",
   "types": "build/index.d.ts",
   "exports": {
