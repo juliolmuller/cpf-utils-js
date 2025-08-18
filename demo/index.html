@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      CPF Utils
+    </title>
+    <link rel="icon" href="https://github.com/juliolmuller.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="./styles/nouislider.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+
+  <body>
+    <nav class="blue darken-4" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="my-brand" class="brand-logo left" href="https://github.com/juliolmuller">
+          <img src="https://github.com/juliolmuller.png" alt="Logo" />
+          <strong class="hide-on-small-only">juliolmuller</strong>
+        </a>
+
+        <ul class="right">
+          <li>
+            <a href="https://github.com/juliolmuller/cpf-utils-js" title="GitHub">
+              <svg id="github-icon" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section no-pad-bot">
+      <div class="container">
+        <header class="center">
+          <h1 class="header">
+            <span class="green-text text-darken-4">CPF</span>
+            <span class="yellow-text text-darken-3">Utils</span>
+          </h1>
+
+          <h5 class="header col s12 light">
+            O seu utilitário para manipulação de CPF.
+          </h5>
+        </header>
+
+        <div id="scripts" class="row center">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3"><a class="active" href="#cli-npm">NPM</a></li>
+              <li class="tab col s3"><a href="#cli-bun">Bun</a></li>
+              <li class="tab col s3"><a href="#cli-pnpm">PNPM</a></li>
+              <li class="tab col s3"><a href="#cli-yarn">Yarn</a></li>
+            </ul>
+          </div>
+
+          <div id="cli-npm" class="col s12">
+            <div class="tab-view">
+              <code>npm install cpf-utils</code>
+              <button class="waves-effect waves-light" type="button" title="Copiar comando">
+                <i class="material-symbols-outlined">content_copy</i>
+              </button>
+              <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+            </div>
+          </div>
+
+          <div id="cli-bun" class="col s12">
+            <div class="tab-view">
+              <code>bun add cpf-utils</code>
+              <button class="waves-effect waves-light" type="button" title="Copiar comando">
+                <i class="material-symbols-outlined">content_copy</i>
+              </button>
+              <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+            </div>
+          </div>
+
+          <div id="cli-pnpm" class="col s12">
+            <div class="tab-view">
+              <code>pnpm add cpf-utils</code>
+              <button class="waves-effect waves-light" type="button" title="Copiar comando">
+                <i class="material-symbols-outlined">content_copy</i>
+              </button>
+              <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+            </div>
+          </div>
+
+          <div id="cli-yarn" class="col s12">
+            <div class="tab-view">
+              <code>yarn add cpf-utils</code>
+              <button class="waves-effect waves-light" type="button" title="Copiar comando">
+                <i class="material-symbols-outlined">content_copy</i>
+              </button>
+              <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="section">
+        <div id="features">
+          <section class="feature-block">
+            <header class="icon-block">
+              <h2 class="center light-blue-text mirror"><i class="material-symbols-outlined">control_point_duplicate</i></h2>
+              <h5 class="center">Gerador</h5>
+            </header>
+
+            <p class="center light">
+              Gerar um CPF aleatório válido.
+            </p>
+
+            <div id="gen-output">
+              <div class="input-field">
+                <input id="gen-output-field" type="text" readonly />
+                <label for="gen-output-field">Resultado</label>
+                <button class="waves-effect waves-dark" type="button" title="Copiar CPF" disabled>
+                  <i class="material-symbols-outlined">content_copy</i>
+                </button>
+                <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+              </div>
+            </div>
+
+            <button id="gen-btn" type="button" class="waves-effect waves-light btn">
+              Gerar CPF
+            </button>
+
+            <details id="gen-options">
+              <summary>Opções de geração</summary>
+
+              <hr />
+
+              <div id="gen-format">
+                <label for="gen-format-field">
+                  <input id="gen-format-field" type="checkbox" class="filled-in" />
+                  <span>Formatar valor gerado</span>
+                </label>
+              </div>
+            </details>
+          </section>
+
+          <section class="feature-block">
+            <header class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-symbols-outlined">bookmark_check</i></h2>
+              <h5 class="center">Validador</h5>
+            </header>
+
+            <p class="center light">
+              Validar se um CPF é válido.
+            </p>
+
+            <div id="val-input" class="input-field">
+              <input id="val-input-field" type="text" />
+              <label for="val-input-field">CPF para validar</label>
+              <button class="waves-effect waves-dark" type="button" title="Colar CPF">
+                <i class="material-symbols-outlined">content_paste</i>
+              </button>
+            </div>
+
+            <div id="val-alert-valid" class="badge green">
+              <i class="material-symbols-outlined">check</i>
+              CPF válido
+            </div>
+
+            <div id="val-alert-invalid" class="badge red">
+              <i class="material-symbols-outlined">close</i>
+              CPF inválido
+            </div>
+          </section>
+
+          <section class="feature-block">
+            <header class="icon-block">
+              <h2 class="center light-blue-text mirror"><i class="material-symbols-outlined">reset_wrench</i></h2>
+              <h5 class="center">Formatador</h5>
+            </header>
+
+            <p class="center light">
+              Formatar um CPF para o formato tradicional ou mascarado.
+            </p>
+
+            <div id="fmt-input" class="input-field">
+              <input id="fmt-input-field" type="text" />
+              <label for="fmt-input-field">CPF para formatar</label>
+              <button class="waves-effect waves-dark" type="button" title="Colar CPF">
+                <i class="material-symbols-outlined">content_paste</i>
+              </button>
+            </div>
+
+            <button id="fmt-btn" type="button" class="waves-effect waves-light btn" disabled>
+              Formatar CPF
+            </button>
+
+            <div id="fmt-output">
+              <div class="input-field">
+                <input id="fmt-output-field" type="text" readonly />
+                <label for="fmt-output-field">Resultado</label>
+                <button class="waves-effect waves-dark" type="button" title="Copiar CPF" disabled>
+                  <i class="material-symbols-outlined">content_copy</i>
+                </button>
+                <i class="material-symbols-outlined green-text" style="display: none;">check</i>
+              </div>
+            </div>
+
+            <details id="fmt-options">
+              <summary>Opções de formatação</summary>
+
+              <hr />
+
+              <fieldset id="fmt-delimiters">
+                <legend>Delimitadores</legend>
+
+                <div class="input-field">
+                  <input id="fmt-delimiter-dot" type="text" value="." />
+                  <label for="fmt-delimiter-dot">Delimitador de ponto</label>
+                </div>
+                <div class="input-field">
+                  <input id="fmt-delimiter-dash" type="text" value="-" />
+                  <label for="fmt-delimiter-dash">Delimitador de hífen</label>
+                </div>
+              </fieldset>
+
+              <fieldset id="fmt-hidden">
+                <legend>Mascarar CPF</legend>
+
+                <label for="fmt-is-hidden">
+                  <input id="fmt-is-hidden" type="checkbox" class="filled-in" />
+                  <span>Mascarar CPF</span>
+                </label>
+
+                <div class="input-field">
+                  <input id="fmt-hidden-key" type="text" value="*" />
+                  <label for="fmt-hidden-key">Caractere de máscara</label>
+                </div>
+
+                <div id="fmt-hidden-range">
+                  <p>Mascarar digitos de <span id="fmt-hidden-range-start">4</span> ao <span id="fmt-hidden-range-end">11</span></p>
+                  <div class="slider"></div>
+                </div>
+              </fieldset>
+            </details>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <footer class="page-footer light-green lighten-5">
+      <div class="container">
+        <div class="row center">
+          <div class="col s12">
+            <strong>LacusSoft &copy; <script>document.write(new Date().getFullYear())</script></strong>
+            - Todos os direitos reservados.
+          </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cpf-utils@latest/dist/cpf-utils.min.js"></script>
+    <script src="./scripts/nouislider.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
