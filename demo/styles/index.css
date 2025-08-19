@@ -1,12 +1,77 @@
+*:focus {
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.2);
+  outline: 2px solid rgba(25, 118, 210, 0.5);
+  outline-offset: 2px;
+}
+
+*::selection {
+  background-color: rgba(27, 94, 32, 0.85);
+  color: #fff;
+}
+
 html,
 body {
   min-height: 100vh;
   min-height: 100svh;
+  outline: none;
 }
 
 body {
   position: relative;
   padding-bottom: 96px;
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  transition: top 0.3s ease;
+
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  z-index: 1000;
+
+  border-radius: 4px;
+  background: #000;
+  padding: 8px;
+
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+@media (max-width: 600px) {
+  .skip-link {
+    left: 4px;
+    padding: 6px;
+    font-size: 14px;
+  }
 }
 
 .input-field {
@@ -30,11 +95,11 @@ body {
   color: #0d47a1;
 }
 
-.input-field input[type=text]:focus+label {
+.input-field input[type=text]:focus + label {
   color: #0d47a1 !important;
 }
 
-.input-field input[type=text]~button {
+.input-field input[type=text] ~ button {
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
   background-color: transparent;
@@ -46,7 +111,7 @@ body {
   color: #0d47a1;
 }
 
-.input-field input[type=text]~button:disabled {
+.input-field input[type=text] ~ button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
   color: #737373;
@@ -80,13 +145,17 @@ body {
   color: inherit !important;
 }
 
-label>input[type=checkbox]+span {
+label > input[type=checkbox] + span {
   color: #313131;
 }
 
-label>input[type=checkbox]:checked+span::after {
+label > input[type=checkbox]:checked + span::after {
   border-color: #0d47a1 !important;
   background-color: #0d47a1 !important;
+}
+
+.material-symbols-outlined[aria-hidden="true"] {
+  pointer-events: none;
 }
 
 #my-brand {
@@ -185,11 +254,21 @@ label>input[type=checkbox]:checked+span::after {
 }
 
 #features .feature-block {
+  transition: border-color 0.2s ease-in-out;
   flex: 1;
   min-width: 260px;
   border: 2px solid #c8e6c9;
   border-radius: 8px;
   padding: 16px;
+}
+
+#features .feature-block:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#features .feature-block:focus-within {
+  box-shadow: 0 0 0 2px rgba(27, 94, 32, 0.2);
+  border-color: #1B5E20;
 }
 
 #features .feature-block .icon-block {
@@ -206,7 +285,11 @@ label>input[type=checkbox]:checked+span::after {
   transform: scaleX(-1);
 }
 
-#features .feature-block header+p {
+#features .feature-block h4 {
+  font-size: 1.75rem;
+}
+
+#features .feature-block header + p {
   min-height: 45px;
 }
 

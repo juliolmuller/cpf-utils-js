@@ -1,24 +1,49 @@
 'use strict';
 
+setupSkipLinks();
 setupInstallationTabs();
 setupInstallationCopyButton();
 setupGenFeatures();
 setupValFeatures();
 setupFmtFeatures();
+setupHotkeys();
 
+function setupSkipLinks() {
+  const skipLinks = document.querySelectorAll('.skip-link');
 
-function setupInstallationTabs() {
-  const tabsEls = document.querySelectorAll('.tabs');
+  skipLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
 
-  tabsEls.forEach((tabEl) => {
-    M.Tabs.init(tabEl, {});
-  });
+      const target = document.querySelector(this.getAttribute('href'));
 
-  tabsEls.forEach(tab => {
-    tab.addEventListener('click', () => {
-      console.log('clicked');
+      if (target) {
+        target.focus();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
+}
+
+function setupInstallationTabs() {
+  const tabsEl = document.querySelector('[role="tablist"]');
+  const tabEls = tabsEl.querySelectorAll('[role="tab"]');
+
+  M.Tabs.init(tabsEl, {});
+  tabEls.forEach((tabEl) => {
+    tabEl.addEventListener('click', (event) => {
+      event.preventDefault();
+      activateTab(tabEl);
+    });
+  });
+
+  function activateTab(tabEl) {
+    const ariaAttribute = 'aria-selected';
+
+    tabEls.forEach((tabEl) => tabEl.setAttribute(ariaAttribute, 'false'));
+    document.querySelector(tabEl.getAttribute('href'))?.focus();
+    tabEl.setAttribute(ariaAttribute, 'true');
+  }
 }
 
 function setupInstallationCopyButton() {
@@ -69,6 +94,7 @@ function setupGenFeatures() {
     });
 
     setOutputValue(cpf);
+    copyBtnEl.focus();
   });
 
   copyBtnEl.addEventListener('click', async () => {
@@ -214,6 +240,11 @@ function setupFmtFeatures() {
         setInputValue('');
         setOutputValue('');
       }
+
+      if (inputFieldEl.value && event.key === 'Enter') {
+        formatCpf();
+        copyBtnEl.focus();
+      }
     });
 
     inputFieldEl.addEventListener('input', () => {
@@ -287,4 +318,31 @@ function setupFmtFeatures() {
       formatCpf();
     });
   }
+}
+
+function setupHotkeys() {
+  document.addEventListener('keydown', function (event) {
+    if (event.altKey && event.key === 'g') {
+      event.preventDefault();
+
+      document.getElementById('gen-title').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('gen-btn').click();
+      document.querySelector('#gen-output-field').focus();
+    }
+
+    if (event.altKey && event.key === 'v') {
+      event.preventDefault();
+
+      document.getElementById('val-title').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#val-input button').click();
+      document.querySelector('#val-input input').focus();
+    }
+
+    if (event.altKey && event.key === 'f') {
+      event.preventDefault();
+
+      document.getElementById('fmt-title').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#fmt-input button').click();
+    }
+  });
 }
